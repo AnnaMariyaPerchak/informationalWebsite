@@ -1,0 +1,293 @@
+nav .menu {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+nav .menu li {
+  display: inline;
+}
+
+nav .menu li a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #c5cbe7;
+  border-bottom: 5px solid black;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+nav .hamburgerMenu {
+  visibility: hidden;
+}
+
+.weather {
+  width: 600px;
+  height: auto;
+  margin: 0 auto;
+  padding: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c5cbe7), to(#59a5b5));
+  background: linear-gradient(#c5cbe7, #59a5b5);
+  border-radius: 15px;
+}
+
+.weather__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.weather__local {
+  background-color: #428593;
+  width: 360px;
+  height: auto;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.weather__local__left__text {
+  line-height: 10px;
+}
+
+.weather__local__left__city {
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+
+.weather__local__center img {
+  width: auto;
+  height: 160px;
+}
+
+.weather__local__right__momentTemp {
+  font-size: 40px;
+  margin: 0 auto;
+  text-align: end;
+}
+
+.weather__addInfo {
+  margin: 0 20px;
+  width: 150px;
+  border-radius: 15px;
+  background-color: #428593;
+  padding: 0 10px;
+}
+
+.weather__addInfo__chapter__title {
+  text-align: center;
+}
+
+.exchange {
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 5px 14px;
+  border-radius: 15px;
+  border: 3px solid #c5cbe7;
+}
+
+.news__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+  grid-gap: 10px;
+  gap: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.news__container__card {
+  height: 535px;
+  position: relative;
+  background: #c5cbe7;
+  border-radius: 15px;
+  float: left;
+  width: 30%;
+}
+
+.news__container__card:hover {
+  -webkit-box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.2);
+}
+
+.news__container__card__img {
+  width: 100%;
+  height: 180px;
+  border-radius: 15px;
+}
+
+.news__container__card__info {
+  padding: 10px;
+}
+
+.news__container__card__info__title {
+  font-weight: bold;
+  margin-top: 5px;
+  height: 70px;
+}
+
+.news__container__card__info__description {
+  padding: 15px 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 10px;
+  height: 150px;
+}
+
+.news__container__card__info__readMore {
+  padding: 0 15px;
+  color: black;
+}
+
+.news__container__card__info__whoWhen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  letter-spacing: 1px;
+  line-height: 10px;
+  padding: 0 15px;
+}
+
+.news__container__card__info__whoWhen__who {
+  font-size: 11px;
+}
+
+.news__container__card__info__whoWhen__when {
+  font-size: 14px;
+  margin-left: auto;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .news__container__card {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  nav .menu {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  nav .hamburgerMenu {
+    visibility: visible;
+    display: block;
+    position: relative;
+    top: 15px;
+    padding-left: 15px;
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+  }
+  nav .hamburgerMenu a {
+    text-decoration: none;
+    color: #232323;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+  nav .hamburgerMenu a:hover {
+    color: tomato;
+  }
+  nav .hamburgerMenu input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+  nav .hamburgerMenu input:checked ~ span {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) translate(-2px, -1px);
+            transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+  nav .hamburgerMenu input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+            transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  nav .hamburgerMenu input:checked ~ span:nth-last-child(2) {
+    -webkit-transform: rotate(-45deg) translate(0, -1px);
+            transform: rotate(-45deg) translate(0, -1px);
+  }
+  nav .hamburgerMenu input:checked ~ ul {
+    -webkit-transform: none;
+            transform: none;
+  }
+  nav .hamburgerMenu span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    -webkit-transform-origin: 4px 0px;
+            transform-origin: 4px 0px;
+    -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  nav .hamburgerMenu span:first-child {
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  nav .hamburgerMenu span:nth-last-child(2) {
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  nav .hamburgerMenu__menu {
+    position: absolute;
+    width: 100px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #c5cbe7;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  nav .hamburgerMenu__menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  .news__container__card {
+    width: 80%;
+    height: auto;
+  }
+  .news__container__card__info__description {
+    height: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
